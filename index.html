@@ -12,10 +12,12 @@
 <body>
     <header>
         <h1 class="title1">TO DO LIST</h1>
-        <form action="" class="addForm">
+        <form class="select-priority" onsubmit="onTaskSubmit(); return false;">
             <select name="priorityNone" id="priorityNone" class="priorityNone">
                 <option value="valPriorityNone"></option>
             </select>
+        </form>
+        <form action="" class="addForm">
             <input type="text" placeholder="ici le texte">
             <button>ADD</button>
         </form>
@@ -157,5 +159,6 @@
             </div>
         </section>  
     </main>
+<script src="./js/index.js"></script>
 </body>
 </html>
