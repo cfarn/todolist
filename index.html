@@ -12,14 +12,12 @@
 <body>
     <header>
         <h1 class="title1">TO DO LIST</h1>
-        <form class="select-priority" onsubmit="onTaskSubmit(); return false;">
+        <form class="addForm" onsubmit="onTaskSubmit(); return false;">
             <select name="priorityNone" id="priorityNone" class="priorityNone">
                 <option value="valPriorityNone"></option>
             </select>
-        </form>
-        <form action="" class="addForm">
-            <input type="text" placeholder="ici le texte">
-            <button>ADD</button>
+            <input id="task-push" type="text" placeholder="ici le texte">
+            <button id="addButton">ADD</button>
         </form>
     </header>
     <main class="mainContainer">
