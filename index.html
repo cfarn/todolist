@@ -7,18 +7,47 @@
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <title>To Do List</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
-        <h1>TO DO LIST</h1>
-        <form action="">
+        <h1 class="title1">TO DO LIST</h1>
+        <form action="" class="addForm">
+            <select name="priorityNone" id="priorityNone" class="priorityNone">
+                <option value="valPriorityNone"></option>
+            </select>
             <input type="text" placeholder="ici le texte">
             <button>ADD</button>
         </form>
     </header>
-    <main>
-        <aside>
-            
+    <main class="mainContainer">
+        <aside id="tasks" class="tasks">
+            <section >
+                <div>
+                    <img src="img/random.png" alt="image random" id="randomImg">
+                    <a href="#" id="randomLink">Random Task</a>
+                </div>
+                <div>
+                    <img src="img/etoile.png" alt="image étoile" id="priorityImg">
+                    <a href="#" id="priorityLink">Priority</a>
+                </div>
+            </section>
+            <div>
+                <img src="img/to-do.png" alt="image to do" id="todoImg">
+                <a href="#" id="todoLink">To Do</a>
+            </div>
+            <div>
+                <img src="img/doing.png" alt="image doing" id="doingImg">
+                <a href="#" id="doingLink">Doing</a>
+            </div>
+            <div>
+                <img src="img/done.png" alt="image done" id="doneImg">
+                <a href="#" id="doneLink">Done</a>
+            </div>
+            <div>
+                <img src="img/all.png" alt="image all" id="allImg">
+                <a href="#" id="allLink">All</a>
+            </div>
         </aside>
         <section class="tasks-list-container">
             <h2>To Do</h2>
