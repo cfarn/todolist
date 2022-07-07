@@ -10,8 +10,8 @@ const taskInfos = {
 const onTaskSubmit = (e) =>{
     e.preventDefault()
     let x = document.getElementById("task-push").value
-
-    console.log(onTaskSubmit)
+    let arrayX = tasks.push(x)
+    console.log(tasks)
 }
 
 addButton.addEventListener("click", onTaskSubmit)
