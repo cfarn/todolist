@@ -1,4 +1,8 @@
 let addButton = document.getElementById("addButton")
+let toDoLink = document.getElementById("todoLink")
+let doingLink = document.getElementById("doingLink")
+let doneLink = document.getElementById("doneLink")
+let allLink = document.getElementById("allLink")
 
 const tasks = []
 
@@ -14,9 +18,19 @@ const onTaskSubmit = (e) =>{
     console.log(tasks)
 }
 
+
+console.log(onTaskSubmit)
+
 addButton.addEventListener("click", onTaskSubmit)
 
 let modifyData = () => {
     
 }
+
+// filtrer les taches 
+
+toDoLink.addEventListener("click", event => {
+    const filterToDo = tasks.filter()
+})
+
 
