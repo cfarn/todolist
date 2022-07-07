@@ -13,9 +13,11 @@
     <header>
         <h1 class="title1">TO DO LIST</h1>
         <form class="addForm" onsubmit="onTaskSubmit(); return false;">
+            <!-- priorité -->
             <select name="priorityNone" id="priorityNone" class="priorityNone">
                 <option value="valPriorityNone"></option>
             </select>
+            <!-- ajout de tâche -->
             <input id="task-push" type="text" placeholder="ici le texte">
             <button id="addButton">ADD</button>
         </form>
