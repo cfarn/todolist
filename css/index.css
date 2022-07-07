@@ -12,6 +12,11 @@
     box-sizing: border-box;
 }
 
+aside img{
+    width: 10px;
+    height: auto;
+}
+
 body {
     background-color: #D9D7F1;
     font-size: 18px;
