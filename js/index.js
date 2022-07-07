@@ -6,50 +6,51 @@ let allLink = document.getElementById("allLink")
 
 const tasks = []
 
-// const taskInfos = {
-//     value: "",
-//     status: "to do",
-// }
 
 // on ajoute une tâche
 const onTaskSubmit = (e) =>{
     e.preventDefault()
     let x = document.getElementById("task-push").value
-    let arrayX = tasks.push(x)
+    
+    const taskInfos = {
+        value: x,
+        status: "to do",
+    }
+
+    let arrayX = tasks.push(taskInfos)
+    
     console.log(tasks)
 
-
        let test = document.getElementById("task")
-       test.innerHTML +=
-        ` <div id="task">
-        <div class="checkbox"></div>
-        <form class="form-task">
-            <input type="text" id="input-task" name="input-task" value="${x}">
+       let newTasks = test.innerHTML +=
+        ` <div id="task-${Date.now}">
+        <div id="checkbox-${Date.now}"></div>
+        <form id="form-task-${Date.now}">
+            <input type="text" id="input-task-${Date.now}" name="input-task" value="${x}">
         </form>
-        <div class="img-modify-carbage">
-            <img src="./img/edit.png" alt="modify" />
-            <img class = "delete-first" src="./img/trash.png" alt="delete" />
+        <div id="img-modify-carbage">
+            <img id ="modify-${Date.now}" src="./img/edit.png" alt="modify" />
+            <img id = "delete-${Date.now}" src="./img/trash.png" alt="delete" />
         </div>
-        <div class="update">
-            <div class="title-status">
+        <div id="update">
+            <div id="title-status-${Date.now}">
                 <img src="./img/edit.png" alt="modify" />
                 <p>Status update</p>
             </div>
             <form>
-                <input type="text" id="modification" name="first-modification" value="">
-                <select name="status" id="status-select">
+                <input type="text" id="modification-${Date.now}" name="first-modification" value="">
+                <select name="status" id="status-select-${Date.now}">
                     <option value="">Please update your status</option>
                     <option value="Todo">To Do</option>
                     <option value="Doing">Doing</option>
                     <option value="Done">Done</option>
                 </select>
-                <input type="submit" value="Modifier">
+                <input id="submit--${Date.now}" type="submit" value="Modifier">
             </form>
         </div>  
     </div>
         `
-
-
+        
 }
 
 
@@ -67,3 +68,10 @@ let modifyData = () => {
 //     const filterToDo = tasks.filter()
 // })
 // 
+
+
+//  delete 
+
+// toDoLink.addEventListener("click", event => {
+//     task.remove()
+// })
