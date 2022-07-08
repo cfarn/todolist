@@ -9,7 +9,6 @@ let taskNumber = 0
 
 const tasks = []
 
-addButton.addEventListener("click", onTaskSubmit)
 
 // on ajoute une tâche
 const onTaskSubmit = (e) =>{
@@ -59,6 +58,8 @@ const onTaskSubmit = (e) =>{
     taskNumber ++
 }
 
+addButton.addEventListener("click", onTaskSubmit)
+
 // console.log(onTaskSubmit)
 
 
@@ -77,13 +78,13 @@ const onTaskSubmit = (e) =>{
 //  delete 
 
 let onDelete = (number) => {
-    console.log(tasks)
     let index
     tasks.forEach((task,i) => {
         if(task.id === number){
             index = i
         }
     })
+   
     tasks.splice(index, 1)
     console.log(tasks)
 
