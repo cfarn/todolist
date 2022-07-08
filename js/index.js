@@ -1,3 +1,4 @@
+let taskPush = document.getElementById("task-push")
 let addButton = document.getElementById("addButton")
 let toDoLink = document.getElementById("todoLink")
 let doingLink = document.getElementById("doingLink")
