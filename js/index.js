@@ -1,3 +1,4 @@
+let taskPush = document.getElementById("task-push")
 let addButton = document.getElementById("addButton")
 let toDoLink = document.getElementById("todoLink")
 let doingLink = document.getElementById("doingLink")
@@ -21,35 +22,37 @@ const onTaskSubmit = (e) =>{
     
     console.log(tasks)
 
-       let test = document.getElementById("task")
-       let newTasks = test.innerHTML +=
-        ` <div id="task-${Date.now}">
-        <div id="checkbox-${Date.now}"></div>
-        <form id="form-task-${Date.now}">
-            <input type="text" id="input-task-${Date.now}" name="input-task" value="${x}">
-        </form>
-        <div id="img-modify-carbage">
-            <img id ="modify-${Date.now}" src="./img/edit.png" alt="modify" />
-            <img id = "delete-${Date.now}" src="./img/trash.png" alt="delete" />
-        </div>
-        <div id="update">
-            <div id="title-status-${Date.now}">
-                <img src="./img/edit.png" alt="modify" />
-                <p>Status update</p>
-            </div>
-            <form>
-                <input type="text" id="modification-${Date.now}" name="first-modification" value="">
-                <select name="status" id="status-select-${Date.now}">
-                    <option value="">Please update your status</option>
-                    <option value="Todo">To Do</option>
-                    <option value="Doing">Doing</option>
-                    <option value="Done">Done</option>
-                </select>
-                <input id="submit--${Date.now}" type="submit" value="Modifier">
+    let test = document.getElementById("task")
+    let newTasks = test.innerHTML +=
+    ` <div id="task-${Date.now}">
+            <div id="checkbox-${Date.now}"></div>
+            <form id="form-task-${Date.now}">
+                <input type="text" id="input-task-${Date.now}" name="input-task" value="${x}">
             </form>
-        </div>  
-    </div>
-        `
+            <div id="img-modify-carbage">
+                <img id ="modify-${Date.now}" src="./img/edit.png" alt="modify" />
+                // <img id = "delete-${Date.now}" src="./img/trash.png" alt="delete" />
+                <button id = "trashBtn"><img id = "delete-${Date.now}" src="./img/trash.png" alt="delete" /></button>
+            </div>
+            <div id="update">
+                <div id="title-status-${Date.now}">
+                    <img src="./img/edit.png" alt="modify" />
+                    <p>Status update</p>
+                </div>
+                <form>
+                    <input type="text" id="modification-${Date.now}" name="first-modification" value="">
+                    <select name="status" id="status-select-${Date.now}">
+                        <option value="">Please update your status</option>
+                        <option value="Todo">To Do</option>
+                        <option value="Doing">Doing</option>
+                        <option value="Done">Done</option>
+                    </select>
+                    <input id="submit--${Date.now}" type="submit" value="Modifier">
+                </form>
+            </div>  
+        </div>
+    `
+    taskPush.value = ""
         
 }
 
@@ -75,3 +78,12 @@ let modifyData = () => {
 // toDoLink.addEventListener("click", event => {
 //     task.remove()
 // })
+
+toDoLink.addEventListener("click", event => {
+    const d = event.target
+    if(d.id === "trashBtn") {
+        // const myTask = d.parentElement
+        // myTask.remove()
+        d.remove()
+    }
+})

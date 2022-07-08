@@ -35,3 +35,30 @@ header {
 .priorityNone {
     display: none;
 }
+
+.addForm {
+    margin: 5% 0;
+    /* position: relative; */
+}
+
+#task-push {
+    width: 45%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 25px;
+}
+
+#addButton {
+    color: #fff;
+    font-weight: 700;
+    background-color: #FFDD67;
+    border: none;
+    padding: 10px 30px;
+    height: 45px;
+    border-radius: 25px;
+    /* position: absolute; */
+    /* right: 260px;
+    top: 2px; */
+    cursor: pointer;
+}
