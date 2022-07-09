@@ -6,6 +6,7 @@ let doneLink = document.getElementById("doneLink")
 let allLink = document.getElementById("allLink")
 let taskContainer = document.getElementById("task")
 let taskNumber = 0
+let addMsg = document.getElementById("addMsg")
 
 const tasks = []
 
@@ -33,12 +34,12 @@ const onTaskSubmit = (e) =>{
                 <input type="text" id="task-creation-${element.id}" name="creation" value="${element.value}">
                 <div id="img-modify-carbage">
                     <img id ="modify-${element.id}" src="./img/edit.png" alt="modify" onClick="onModify('task-${element.id}')"/>
-                    <img id = "delete-${element.id}" src="./img/trash.png" alt="delete" onClick="onDelete(${element.id})" />
+                    <img id = "delete-${element.id}" class = "delete" src="./img/trash.png" alt="delete" onClick="onDelete(${element.id})" />
                 </div>  
             </div>
         `      
     })
-    taskNumber ++
+    taskNumber ++  
 }
 
 addButton.addEventListener("click", onTaskSubmit)
@@ -83,6 +84,13 @@ addButton.addEventListener("click", onTaskSubmit)
 
 
 //  delete 
+
+let currentTasks = document.querySelectorAll(".delete")
+currentTasks.forEach ((currentTask, i) => {
+    currentTask[i].onclick = function() {
+        this.parentNode.remove()
+    }
+})
 
 // let onDelete = (number) => {
 //     let index
