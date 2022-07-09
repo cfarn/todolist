@@ -40,12 +40,14 @@ const onTaskSubmit = (e) =>{
             </div>
         `      
     })
-    taskNumber ++  
+    taskNumber ++ 
+    // reset input
+    taskPush.value = "" 
 }
 
 addButton.addEventListener("click", onTaskSubmit)
 
-
+// delete
 const display = (element => {
     taskContainer.innerHTML = ""
     tasks.forEach (element => {
@@ -57,39 +59,46 @@ const display = (element => {
                         <img  src="./img/edit.png" alt="modify" onCLick="onModify(${element.id})"/>
                         <img src="./img/trash.png" alt="delete" onCLick="onDelete(${element.id})"/>
                 </div>  
-                <div id="update">
-                <div id="title-status-${element.id}">
-                    <img src="./img/edit.png" alt="modify" />
-                    <p>Status update</p>
-                </div>
-                <form>
-                    <input type="text" id="modification-${element.id}" name="first-modification" value="${element.value}">
-                    <select name="status" id="status-select-${element.id}">
-                        <option value="">Please update your status</option>
-                        <option value="Todo">To Do</option>
-                        <option value="Doing">Doing</option>
-                        <option value="Done">Done</option>
-                    </select>
-                    <input id="submit--${element.id}" type="submit" value="Modifier">
-                </form>
-            </div>  
             </div>
         `      
     })
     taskNumber ++  
 })
 
-
+{/* <div id="update">
+    <div id="title-status-${element.id}">
+        <img src="./img/edit.png" alt="modify" />
+        <p>Status update</p>
+    </div>
+    <form>
+        <input type="text" id="modification-${element.id}" name="first-modification" value="${element.value}">
+        <select name="status" id="status-select-${element.id}">
+            <option value="">Please update your status</option>
+            <option value="Todo">To Do</option>
+            <option value="Doing">Doing</option>
+            <option value="Done">Done</option>
+        </select>
+        <input id="submit--${element.id}" type="submit" value="Modifier">
+    </form>
+</div>   */}
 
 
 // console.log(onTaskSubmit)
 
 
-// let onModify = (id) => {
-//     console.log(id)
+// Modify function
+
+// let onModify = (number) => {
+//     let index
+//     tasks.forEach((task,i) {
+//         if(task.id === number) {
+//             index = i
+//         }
+//     })
+
 // }
 
-// filtrer les taches 
+// filtrer les tâches 
 
 // toDoLink.addEventListener("click", event => {
 //     const filterToDo = tasks.filter()
@@ -97,7 +106,7 @@ const display = (element => {
 // 
 
 
-//  delete 
+//  delete function
 
 let onDelete = (number) => {
     let index
