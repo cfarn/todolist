@@ -47,7 +47,7 @@ const onTaskSubmit = (e) =>{
 
 addButton.addEventListener("click", onTaskSubmit)
 
-// delete
+// delete 
 const display = (element => {
     taskContainer.innerHTML = ""
     tasks.forEach (element => {
@@ -63,6 +63,39 @@ const display = (element => {
         `      
     })
     taskNumber ++  
+})
+
+// update
+const update = (element => {
+    taskContainer.innerHTML = ""
+    tasks.forEach (element => {
+        taskContainer.innerHTML += 
+        `   <div id="task-${element.id}">
+                <div id="checkbox-${element.id}"></div>
+                <input type="text" id="task-creation-${element.id}" name="creation" value="${element.value}">
+                <div id="img-modify-carbage" class = "delete">
+                        <img  src="./img/edit.png" alt="modify" onCLick="onModify(${element.id})"/>
+                        <img src="./img/trash.png" alt="delete" onCLick="onDelete(${element.id})"/>
+                </div>  
+            </div>
+            <div id="update">
+                <div id="title-status-${element.id}">
+                    <img src="./img/edit.png" alt="modify" />
+                    <p>Status update</p>
+                </div>
+                <form>
+                    <input type="text" id="modification-${element.id}" name="first-modification" value="${element.value}">
+                    <select name="status" id="status-select-${element.id}">
+                        <option value="">Please update your status</option>
+                        <option value="Todo">To Do</option>
+                        <option value="Doing">Doing</option>
+                        <option value="Done">Done</option>
+                    </select>
+                    <input id="submit--${element.id}" type="submit" value="Modifier">
+                </form>
+            </div> 
+        `      
+    })
 })
 
 {/* <div id="update">
@@ -88,15 +121,17 @@ const display = (element => {
 
 // Modify function
 
-// let onModify = (number) => {
-//     let index
-//     tasks.forEach((task,i) {
-//         if(task.id === number) {
-//             index = i
-//         }
-//     })
+let onModify = (number) => {
+    let index
+    tasks.forEach((task,i) => {
+        if(task.id === number) {
+            index = i
+        }
+    })
+    tasks.splice(index, 1)
+    update()
 
-// }
+}
 
 // filtrer les tâches 
 
