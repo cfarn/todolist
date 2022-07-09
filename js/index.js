@@ -33,8 +33,8 @@ const onTaskSubmit = (e) =>{
                 <div id="checkbox-${element.id}"></div>
                 <input type="text" id="task-creation-${element.id}" name="creation" value="${element.value}">
                 <div id="img-modify-carbage">
-                    <img id ="modify-${element.id}" src="./img/edit.png" alt="modify" onClick="onModify('task-${element.id}')"/>
-                    <img id = "delete-${element.id}" class = "delete" src="./img/trash.png" alt="delete" onClick="onDelete(${element.id})" />
+                    <button id ="modify-${element.id}" onClick="onModify('task-${element.id}')"><img  src="./img/edit.png" alt="modify"/></button>
+                    <button id = "delete-${element.id}" class = "delete" onClick="onDelete(${element.id})"><img src="./img/trash.png" alt="delete"/></button>
                 </div>  
             </div>
         `      
