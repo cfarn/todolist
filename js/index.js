@@ -25,40 +25,47 @@ const onTaskSubmit = (e) =>{
     
     // console.log(tasks)
 
-       taskContainer.innerHTML = ""
-       tasks.forEach (element => {
-       taskContainer.innerHTML +=
-        ` <div id="task-${element.id}">
-        <div id="checkbox-${element.id}"></div>
-            <input type="text" id="task-creation-${element.id}" name="creation" value="${element.value}">
-        <div id="img-modify-carbage">
-            <img id ="modify-${element.id}" src="./img/edit.png" alt="modify" onClick="onModify('task-${element.id}')"/>
-            <img id = "delete-${element.id}" src="./img/trash.png" alt="delete" onClick="onDelete(${element.id})" />
-        </div>
-        <div id="update">
-            <div id="title-status-${element.id}">
-                <img src="./img/edit.png" alt="modify" />
-                <p>Status update</p>
+    taskContainer.innerHTML = ""
+    tasks.forEach (element => {
+        taskContainer.innerHTML +=
+        `   <div id="task-${element.id}">
+                <div id="checkbox-${element.id}"></div>
+                <input type="text" id="task-creation-${element.id}" name="creation" value="${element.value}">
+                <div id="img-modify-carbage">
+                    <img id ="modify-${element.id}" src="./img/edit.png" alt="modify" onClick="onModify('task-${element.id}')"/>
+                    <img id = "delete-${element.id}" src="./img/trash.png" alt="delete" onClick="onDelete(${element.id})" />
+                </div>  
             </div>
-            <form>
-                <input type="text" id="modification-${element.id}" name="first-modification" value="${element.value}">
-                <select name="status" id="status-select-${element.id}">
-                    <option value="">Please update your status</option>
-                    <option value="Todo">To Do</option>
-                    <option value="Doing">Doing</option>
-                    <option value="Done">Done</option>
-                </select>
-                <input id="submit--${element.id}" type="submit" value="Modifier">
-            </form>
-        </div>  
-    </div>
-     `      
-     
+        `      
     })
     taskNumber ++
 }
 
 addButton.addEventListener("click", onTaskSubmit)
+
+
+// <div id="update">
+//     <div id="title-status-${element.id}">
+//         <img src="./img/edit.png" alt="modify" />
+//         <p>Status update</p>
+//     </div>
+//     <form>
+//         <input type="text" id="modification-${element.id}" name="first-modification" value="${element.value}">
+//         <select name="status" id="status-select-${element.id}">
+//             <option value="">Please update your status</option>
+//             <option value="Todo">To Do</option>
+//             <option value="Doing">Doing</option>
+//             <option value="Done">Done</option>
+//         </select>
+//         <input id="submit--${element.id}" type="submit" value="Modifier">
+//     </form>
+// </div>  
+
+
+
+
+
+
 
 // console.log(onTaskSubmit)
 
@@ -77,16 +84,16 @@ addButton.addEventListener("click", onTaskSubmit)
 
 //  delete 
 
-let onDelete = (number) => {
-    let index
-    tasks.forEach((task,i) => {
-        if(task.id === number){
-            index = i
-        }
-    })
+// let onDelete = (number) => {
+//     let index
+//     tasks.forEach((task,i) => {
+//         if(task.id === number){
+//             index = i
+//         }
+//     })
    
-    tasks.splice(index, 1)
-    console.log(tasks)
+//     tasks.splice(index, 1)
+//     console.log(tasks)
 
-}
+// }
 

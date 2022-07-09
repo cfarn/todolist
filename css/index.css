@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
 img{
     width: 20px;
     height: auto;
@@ -13,22 +15,25 @@ img{
 }
 
 aside img{
-    width: 10px;
+    width: 20px;
     height: auto;
 }
 
 body {
     background-color: #D9D7F1;
     font-size: 18px;
+    font-family: 'Kalam', cursive;
 }
 
 header {
     text-align: center;
+    padding: 50px 0;
 }
 
 .title1 {
     text-align: center;
     font-size: 3em;
+    font-weight: 700;
     color: #fff;
 }
 
@@ -42,7 +47,7 @@ header {
 }
 
 #task-push {
-    width: 45%;
+    width: 50%;
     height: 50px;
     border-radius: 25px;
     border: none;
@@ -61,4 +66,28 @@ header {
     /* right: 260px;
     top: 2px; */
     cursor: pointer;
+}
+
+.mainContainer {
+    display: flex;
+    margin: 0 20%;
+    justify-content: space-between;
+    background-color: lightyellow;
+}
+
+.tasks-list-container {
+    border-color: aquamarine;
+}
+
+.tasks {
+    width: 200px;
+    background-color: #fff;
+    line-height: 2.3em;
+    padding: 10px;
+}
+
+#task {
+    /* display: flex; */
+    background-color: #fff;
+    width: 300px;
 }
