@@ -32,14 +32,26 @@ const onTaskSubmit = (e) =>{
         `   <div id="task-${element.id}">
                 <div id="checkbox-${element.id}"></div>
                 <input type="text" id="task-creation-${element.id}" name="creation" value="${element.value}">
-                <div id="img-modify-carbage">
-                    <button id ="modify-${element.id}" onClick="onModify('task-${element.id}')"><img  src="./img/edit.png" alt="modify"/></button>
-                    <button id = "delete-${element.id}" class = "delete" onClick="onDelete(${element.id})"><img src="./img/trash.png" alt="delete"/></button>
+                <div id="img-modify-carbage" class = "delete">
+                    <button id ="modify-${element.id}" onClick="onModify('task-${element.id}')">
+                        <img  src="./img/edit.png" alt="modify"/>
+                    </button>
+                    <button id = "delete-${element.id}" onClick="onDelete(${element.id})">
+                        <img src="./img/trash.png" alt="delete"/>
+                    </button>
                 </div>  
             </div>
         `      
     })
     taskNumber ++  
+
+    // remove
+    let currentTasks = document.querySelectorAll(".delete")
+    currentTasks.forEach ((currentTask, i) => {
+        currentTasks[i].onclick = function() {
+            this.parentNode.remove()
+        }
+    })
 }
 
 addButton.addEventListener("click", onTaskSubmit)
@@ -85,12 +97,7 @@ addButton.addEventListener("click", onTaskSubmit)
 
 //  delete 
 
-let currentTasks = document.querySelectorAll(".delete")
-currentTasks.forEach ((currentTask, i) => {
-    currentTask[i].onclick = function() {
-        this.parentNode.remove()
-    }
-})
+
 
 // let onDelete = (number) => {
 //     let index
