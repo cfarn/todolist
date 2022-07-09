@@ -7,6 +7,7 @@ let allLink = document.getElementById("allLink")
 let taskContainer = document.getElementById("task")
 let taskNumber = 0
 
+
 const tasks = []
 
 
@@ -79,6 +80,7 @@ addButton.addEventListener("click", onTaskSubmit)
 
 let onDelete = (number) => {
     let index
+    let modification
     tasks.forEach((task,i) => {
         if(task.id === number){
             index = i
@@ -86,6 +88,7 @@ let onDelete = (number) => {
     })
    
     tasks.splice(index, 1)
+    modification = tasks.innerHTML = ''
     console.log(tasks)
 
 }
