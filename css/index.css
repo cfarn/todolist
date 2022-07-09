@@ -91,3 +91,7 @@ header {
     background-color: #fff;
     width: 300px;
 }
+
+#update{
+    display: none;
+}
