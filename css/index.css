@@ -37,9 +37,9 @@ header {
     color: #fff;
 }
 
-.priorityNone {
+/* .priorityInput {
     display: none;
-}
+} */
 
 .addForm {
     margin: 5% 0;
@@ -72,7 +72,6 @@ header {
     display: flex;
     margin: 0 20%;
     justify-content: space-between;
-    background-color: lightyellow;
 }
 
 .tasks-list-container {
@@ -81,9 +80,34 @@ header {
 
 .tasks {
     width: 200px;
+    height: 350px;
     background-color: #fff;
     line-height: 2.3em;
     padding: 10px;
+    border-radius: 10px;
+}
+
+.tasks a {
+    text-decoration: none;
+}
+
+#randomLink {
+    color: #4E88E0;
+}
+#priorityLink {
+    color: #FFC107;
+}
+#todoLink {
+    color: #46443E;
+}
+#doingLink {
+    color: #FAD207;
+}
+#doneLink {
+    color: #80AAFF;
+}
+#allLink {
+    color: #C5E1A5;
 }
 
 #task {
@@ -94,4 +118,16 @@ header {
 
 #update{
     display: none;
+}
+
+.top {
+    margin: 10px 0;
+    border: 2px solid #FFDD67;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navTask {
+    margin: 10px 0;
+    padding: 0 10px;
 }
