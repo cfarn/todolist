@@ -37,9 +37,9 @@ header {
     color: #fff;
 }
 
-.priorityNone {
+/* .priorityInput {
     display: none;
-}
+} */
 
 .addForm {
     margin: 5% 0;
@@ -52,6 +52,14 @@ header {
     border-radius: 25px;
     border: none;
     padding: 10px 25px;
+}
+
+
+#priorityInput {
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    padding: 10px;
 }
 
 #addButton {
@@ -71,8 +79,8 @@ header {
 .mainContainer {
     display: flex;
     margin: 0 20%;
-    justify-content: space-between;
-    background-color: lightyellow;
+    justify-content: center;
+    gap: 50px;
 }
 
 .tasks-list-container {
@@ -81,17 +89,129 @@ header {
 
 .tasks {
     width: 200px;
+    height: 350px;
     background-color: #fff;
     line-height: 2.3em;
     padding: 10px;
+    border-radius: 10px;
 }
 
-#task {
-    /* display: flex; */
+.tasks a {
+    text-decoration: none;
+}
+
+#randomLink {
+    color: #4E88E0;
+}
+#priorityLink {
+    color: #FFC107;
+}
+
+
+#task-global{
+    display: flex;
+    gap: 20px;
+    align-items: center;
     background-color: #fff;
-    width: 300px;
+    width: 690px;
+    border-radius: 25px;
+    border: none;
+    padding: 14px;
+    margin-bottom: 10px;
 }
 
-#update{
-    display: none;
+.text-value{
+    width: 540px;
+    font-size: 15px;
+    font-family: 'Kalam', cursive;
+    border: none;
+}
+
+#tasks-status{
+    font-size: 13px;
+    font-family: 'Kalam', cursive;
+    color: grey;
+}
+
+
+.update{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: #fff;
+    width: 690px;
+    border-radius: 25px;
+    border: none;
+    padding: 14px;
+    margin-bottom: 10px;    
+}
+
+.form-control{
+    width: 420px;
+    font-size: 15px;
+    font-family: 'Kalam', cursive;
+    border: 2px solid #D9D7F1;
+    border-radius: 25px;
+    padding-left: 14px;
+}
+
+.form-select{
+    border-radius: 25px;
+    padding: 5px;
+    border: 2px solid #D9D7F1;
+}
+
+.btn-cancel{
+    color: #fff;
+    font-weight: 700;
+    background-color: #FFDD67;
+    border: none;
+    padding: 7px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-success{
+    color: #fff;
+    font-weight: 700;
+    background-color: #FFDD67;
+    border: none;
+    padding: 7px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.top {
+    margin: 10px 0;
+    border: 2px solid #FFDD67;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.navTask {
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.navTask button{
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    font-family: 'Kalam', cursive;
+    display: flex;
+    gap: 5px;
+    padding-bottom: 8px;
+}
+
+#btnLink {
+    color: #46443E;
+}
+#btnDoing {
+    color: #FAD207;
+}
+#btnDone {
+    color: #80AAFF;
+}
+#btnAll {
+    color: #C5E1A5;
 }

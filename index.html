@@ -13,8 +13,13 @@
     <header>
         <h1 class="title1">TO DO LIST</h1>
         <form class="addForm" onsubmit="onTaskSubmit(); return false;">
-            <select name="priorityNone" id="priorityNone" class="priorityNone">
-                <option value="valPriorityNone"></option>
+            <select name="priorityInput" id="priorityInput" class="priorityInput">
+                <option value="" selected>Choisir une priorité</option>
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
             </select>
             <input id="task-push" type="text" placeholder="ici le texte">
             <button id="addButton">ADD</button>
@@ -23,7 +28,7 @@
     </header>
     <main class="mainContainer">
         <aside id="tasks" class="tasks">
-            <section>
+            <section class="top">
                 <div class="nav">
                     <img src="img/random.png" alt="image random" id="randomImg">
                     <a href="#" id="randomLink">Random Task</a>
@@ -33,26 +38,23 @@
                     <a href="#" id="priorityLink">Priority</a>
                 </div>
             </section>
-            <div class="nav">
-                <img src="img/to-do.png" alt="image to do" id="todoImg">
-                <a href="#" id="todoLink">To Do</a>
+            <div class="navTask">
+               <button id="btnToDo" onclick="toDoTaskList('to do')"> <img src="img/to-do.png" alt="image to do" id="todoImg">To Do</button> 
             </div>
-            <div class="nav">
-                <img src="img/doing.png" alt="image doing" id="doingImg">
-                <a href="#" id="doingLink">Doing</a>
+            <div class="navTask">
+                <button id="btnDoing" onclick="toDoTaskList('doing')"> <img src="img/doing.png" alt="image doing" id="doingImg">Doing</button> 
             </div>
-            <div class="nav">
-                <img src="img/done.png" alt="image done" id="doneImg">
-                <a href="#" id="doneLink">Done</a>
+            <div class="navTask">
+                <button id="btnDone" onclick="toDoTaskList('done')"><img src="img/done.png" alt="image done" id="doneImg">Done</button>        
             </div>
-            <div class="nav">
-                <img src="img/all.png" alt="image all" id="allImg">
-                <a href="#" id="allLink">All</a>
+            <div class="navTask">
+                <button id="btnAll" onclick="toDoTaskList('to do')"> <img src="img/all.png" alt="image all" id="allImg"> All</button> 
             </div>
         </aside>
         <section class="tasks-list-container">
             <!-- <h2>To Do</h2> -->
             <div id="task">
+                
             </div>
         </section>  
     </main>
