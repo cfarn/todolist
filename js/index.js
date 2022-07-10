@@ -1,3 +1,4 @@
+let priorityInput = document.getElementById("priorityInput")
 let taskPush = document.getElementById("task-push")
 let addButton = document.getElementById("addButton")
 let toDoLink = document.getElementById("todoLink")
@@ -21,27 +22,36 @@ const onTaskSubmit = (e) =>{
         value: input,
         status: "to do",
         id: taskNumber,
+        priority: priorityInput.value
     }
 
-
     tasks.push(taskInfos)
+    priorityInput.value = ""
     
     // console.log(tasks)
-    taskContainer.innerHTML = ""
-    tasks.forEach (element => {
-        taskContainer.innerHTML +=
-        `   <div id="task-${element.id}">
-                <div id="checkbox-${element.id}"></div>
-                <input type="text" id="task-creation-${element.id}" name="creation" value="${element.value}">
-                <div id="img-modify-carbage" class = "delete">
-                        <img  src="./img/edit.png" alt="modify" onCLick="onModify(${element.id})"/>
-                        <img src="./img/trash.png" alt="delete" onCLick="onDelete(${element.id})"/>
-                </div>  
-                
-            </div>
-        `      
-    })
-    taskNumber ++  
+
+    if(input.length < 1) {
+        alert("Vous n'avez pas entré de tâche")
+        // addMsg.textContent = "Vous n'avez pas entré de tâche"
+    }else {
+        taskContainer.innerHTML = ""
+        tasks.forEach (element => {
+            taskContainer.innerHTML +=
+            `   <div id="task-${element.id}">
+                    <div id="checkbox-${element.id}"></div>
+                    <input type="text" id="task-creation-${element.id}" name="creation" value="${element.value}">
+                    <div id="priorityIn">${element.priority !== 0 ? element.priority : ''}</div>
+                    <div id="img-modify-carbage" class = "delete">
+                            <img  src="./img/edit.png" alt="modify" onCLick="onModify(${element.id})"/>
+                            <img src="./img/trash.png" alt="delete" onCLick="onDelete(${element.id})"/>
+                    </div>     
+                </div>
+            `      
+        })
+        taskNumber ++ 
+        // reset input
+        taskPush.value = "" 
+    }
 }
 
 addButton.addEventListener("click", onTaskSubmit)
