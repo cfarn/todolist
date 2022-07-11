@@ -27,7 +27,7 @@ const onTaskSubmit = (e) =>{
         priority: priorityInput.value
     }
 
-    tasks.push(taskInfos)
+    tasks.push(taskInfos)   
     priorityInput.value = ""
     
     if(input.length < 1) {
@@ -214,7 +214,6 @@ const priorityFilter = () => {
 priority.addEventListener("click",priorityFilter)
 
  
-
 
 
 

@@ -62,7 +62,7 @@ const onTaskSubmit = (e) =>{
     taskNumber ++  
 }
 
-addButton.addEventListener("click", onTaskSubmit)
+addButton.addEventListener("submit", onTaskSubmit)
 
 
 const display = (element => {
