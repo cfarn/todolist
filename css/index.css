@@ -78,7 +78,7 @@ header {
 
 .mainContainer {
     display: flex;
-    margin: 0 20%;
+    margin: 0 1%;
     justify-content: center;
     gap: 50px;
 }
